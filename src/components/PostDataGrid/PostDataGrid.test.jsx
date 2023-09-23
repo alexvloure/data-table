@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import CustomDataGrid from './CustomDataGrid';
+import PostDataGrid from './PostDataGrid';
 import renderWithProviders from '../../utils/renderWithProviders';
 import { cleanup, screen } from '@testing-library/react';
 
@@ -26,14 +26,14 @@ const mockData = [
 ];
 
 beforeEach(async () => {
-  renderWithProviders(<CustomDataGrid rows={mockData} isLoading={false} />);
+  renderWithProviders(<PostDataGrid rows={mockData} isLoading={false} />);
 });
 
 afterEach(() => {
   cleanup();
 });
 
-describe('DataGrid', () => {
+describe('PostDataGrid', () => {
   it('should render', async () => {
     const dataGrid = await screen.findByRole('grid');
     expect(dataGrid).toBeInTheDocument();

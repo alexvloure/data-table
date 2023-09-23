@@ -10,7 +10,7 @@ type Props = {
   isLoading: boolean;
 };
 
-const CustomDataGrid = ({ rows, isLoading }: Props) => {
+const PostDataGrid = ({ rows, isLoading }: Props) => {
   const apiRef = useGridApiRef();
   const columns = usePostColumns(apiRef);
   const isDarkMode = useColorSchema();
@@ -51,4 +51,4 @@ const CustomDataGrid = ({ rows, isLoading }: Props) => {
   );
 };
 
-export default CustomDataGrid;
+export default PostDataGrid;

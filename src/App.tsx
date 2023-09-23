@@ -1,10 +1,10 @@
-import { Box, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import './App.css';
 import { useQuery } from '@tanstack/react-query';
 import { Post } from './models/Models';
 import { useEffect, useState } from 'react';
-import DataGridSearch from './components/DataGrid/DataGridSearch/DataGridSearch';
-import CustomDataGrid from './components/DataGrid/CustomDataGrid';
+import DataGridSearch from './components/DataGridSearch/DataGridSearch';
+import PostDataGrid from './components/PostDataGrid/PostDataGrid';
 import Title from './components/Title/Title';
 
 const fetchPosts = () => {
@@ -43,10 +43,11 @@ function App() {
         flexDirection: 'column',
         maxWidth: '1000px !important',
       }}>
-      <Title title={'Exoticca technical assignment'} />
-      <Box sx={{ width: '100%', height: '80vh' }}>
+      <Title title={'Exoticca'} />
+      <Typography sx={{ mb: '1rem' }}>technical assignment</Typography>
+      <Box sx={{ width: '100%', height: '70vh' }}>
         <DataGridSearch handleSearch={handleSearch} />
-        <CustomDataGrid rows={rows} isLoading={isLoading} />
+        <PostDataGrid rows={rows} isLoading={isLoading} />
       </Box>
     </Container>
   );

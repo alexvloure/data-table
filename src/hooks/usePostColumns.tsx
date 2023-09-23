@@ -3,7 +3,7 @@ import { Save, Edit, Cancel } from '@mui/icons-material';
 import { GridRowId } from '@mui/x-data-grid';
 import { GridApiCommunity } from '@mui/x-data-grid/internals';
 import { Column } from '../models/Models';
-import { StyledGridActionItem } from '../components/DataGrid/DataGrid.styled';
+import { StyledGridActionItem } from '../components/PostDataGrid/DataGrid.styled';
 
 export function usePostColumns(
   apiRef: React.MutableRefObject<GridApiCommunity>
