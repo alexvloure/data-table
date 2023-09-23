@@ -5,7 +5,7 @@ import { GridApiCommunity } from '@mui/x-data-grid/internals';
 import { Column } from '../models/Models';
 import { StyledGridActionItem } from '../components/DataGrid/DataGrid.styled';
 
-export function usePostsColumns(
+export function usePostColumns(
   apiRef: React.MutableRefObject<GridApiCommunity>
 ) {
   const [editMode, setEditMode] = useState<GridRowId | string>('');
@@ -14,21 +14,21 @@ export function usePostsColumns(
     {
       field: 'id',
       headerName: 'ID',
-      width: 100,
+      width: 50,
       sortable: false,
       editable: false,
     },
     {
       field: 'title',
       headerName: 'Title',
-      width: 225,
+      width: 250,
       sortable: false,
       editable: true,
     },
     {
       field: 'body',
       headerName: 'Body',
-      width: 350,
+      width: 400,
       sortable: false,
       editable: true,
     },

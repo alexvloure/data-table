@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useColorSchema from '../../hooks/useColorSchema';
+import useColorSchema from '../../../hooks/useColorSchema';
 import { StyledBox, StyledTextField } from './DataGridSearch.styled';
 import { Button, Chip } from '@mui/material';
 
@@ -39,6 +39,7 @@ const DataGridSearch = ({ handleSearch }: Props) => {
       </Button>
       {searchValue !== '' && (
         <Chip
+          data-testid="chipSearch"
           // sx={{ maxWidth: '80px' }}
           color="primary"
           label={searchValue}
